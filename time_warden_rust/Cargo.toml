@@ -1,0 +1,12 @@
+[package]
+name = "time_warden_rust"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+thiserror = "1"
+chrono = "0.4"
+rusqlite = { version = "0.25", features = ["bundled"] }
+
+[dev-dependencies]
+anyhow = "1"
