@@ -4,9 +4,6 @@ pub mod models;
 use db::data_base_initializer::DatabaseInitializer;
 use db::data_base_reader::DatabaseReader;
 
-use models::work_model::Workday;
-use models::work_model::Worksession;
-
 use std::error::Error;
 use rusqlite::{Connection, Result};
 

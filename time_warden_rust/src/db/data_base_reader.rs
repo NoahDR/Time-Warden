@@ -29,7 +29,7 @@ impl DatabaseReader{
 
     pub fn read_work_days_sum_minutes_worked(conn: &Connection, date: &str) -> i32 {
         conn.query_row(
-            "SELECT sum_minutes_worked FROM work_days WHERE date = 01-01-2222",
+            "SELECT sum_minutes_worked FROM work_days WHERE date = ?1",
             params![date],
             |row| row.get(0),
         ).unwrap_or(-1)

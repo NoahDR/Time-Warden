@@ -23,7 +23,8 @@ impl DatabaseInitializer {
     }
     
     fn get_database_path(documents_path: &str) -> PathBuf {
-        Path::new(documents_path).join(DATABASE_NAME)
+        let path = Path::new(documents_path);
+        path.join(DATABASE_NAME)
     }
     
     fn create_table(transaction: &mut Transaction, table_name: &str, schema: &str) -> Result<()> {
